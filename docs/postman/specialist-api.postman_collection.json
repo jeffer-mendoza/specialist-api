@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "9e07945c-d6cb-406d-9f54-56c2c04bf632",
+		"name": "specialist-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21905813"
+	},
+	"item": [
+		{
+			"name": "specilist",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/specialists/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"specialists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/specialists/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"specialists",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "15f9a6b1-a2f6-432b-bade-82b524c35039"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"{{$randomFirstName}}\",\n    \"last_name\": \"{{$randomLastName}}\",\n    \"type\": \"{{$randomJobTitle}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/specialists/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"specialists",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/specialists/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"specialists",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "74c2f6fc-3905-407b-a3a1-a940936652d4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8080",
+			"type": "string"
+		}
+	]
+}
